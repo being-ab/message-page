@@ -1,28 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Message</title>
+    <title>Message</title>
 </head>
 <body>
 
-<h2>Please choose an option</h2>
+    <h2>Please choose an option</h2>
 
-<button onclick="showMessage()">Proceed</button>
-<button onclick="goBack()">Return</button>
+    <button onclick="showContent()">Proceed</button>
+    <button onclick="goBack()">Return</button>
 
-<div id="message" style="display:none; margin-top:20px;">
-  <p>I'm sorry. My name is bla bla bla...</p>
-</div>
+    <div id="content" style="display:none; margin-top:20px;">
 
-<script>
-function showMessage() {
-  document.getElementById("message").style.display = "block";
-}
+        <p>
+            I'm sorry. My name is bla bla bla...
+        </p>
 
-function goBack() {
-  window.location.href = "about:blank";
-}
-</script>
+        <video width="320" controls>
+            <source src="My%20movie.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+    </div>
+
+    <script>
+        function showContent() {
+            document.getElementById("content").style.display = "block";
+        }
+
+        function goBack() {
+            window.location.href = "about:blank";
+        }
+    </script>
 
 </body>
 </html>
